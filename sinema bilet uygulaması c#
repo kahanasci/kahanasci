@@ -1,0 +1,97 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+
+namespace bilet_satiş
+{
+    internal class Program
+    {
+        
+        
+        static void Main(string[] args)
+        {
+          while (true)
+            {
+
+                Console.WriteLine("Sinemamıza Hoşgeldiniz");
+                Console.WriteLine("1)HIZLI\n2)KAPLAN\n3)ÇIKIŞ");
+
+
+
+                int sayi = Convert.ToInt32(Console.ReadLine());
+                if (sayi == 1)
+                {
+                    Console.WriteLine("Bir Seans Seçiniz :");
+                    Console.WriteLine("1)10:00\n2)12:00");
+                    int sayi2 = Convert.ToInt32(Console.ReadLine());
+                    if (sayi2!=1 && sayi2!=2)
+                    {
+                        Console.WriteLine("NAH SANAA");
+                        continue;
+                    }
+                    Console.WriteLine("Kaç tane bilet alacaksınız:");
+                    int adet = Convert.ToInt32(Console.ReadLine());
+                    if (sayi2 == 1)
+                    {
+                        int tutar = adet * 25;
+                        Console.WriteLine("Tutarınız:" + " " + tutar);
+
+                        Console.WriteLine("Biletiniz Oluşturulmuştur ,  İyi Seyirler");
+                        Console.ReadLine();
+                    }
+                    if (sayi2 == 2)
+                    {
+                        int tutar2 = adet * 30;
+                        Console.WriteLine(tutar2);
+
+                        Console.WriteLine("Biletiniz Oluşturulmuştur ,  İyi Seyirler");
+                        Console.ReadLine();
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Yanlış Tuşladınız");
+                    continue;
+                }
+                
+            if (sayi == 2)
+            {
+
+
+                Console.WriteLine("Bir Seans Seçiniz :");
+                Console.WriteLine("1)10:00\n2)12:00");
+                int sayi3 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Kaç tane bilet alacaksınız:");
+                int adet1 = Convert.ToInt32(Console.ReadLine());
+                if (sayi3 == 1)
+                {
+                    int tutar = adet1 * 25;
+                    Console.WriteLine("Tutarınız:" + " " + tutar);
+
+                    Console.WriteLine("Biletiniz Oluşturulmuştur ,  İyi Seyirler");
+                    Console.ReadLine();
+                }
+                if (sayi3 == 2)
+                {
+                    int tutar2 = adet1 * 30;
+                    Console.WriteLine(tutar2);
+
+                    Console.WriteLine("Biletiniz Oluşturulmuştur ,  İyi Seyirler");
+                    Console.ReadLine();
+                }
+            }
+
+            if (sayi == 3)
+            {
+                Console.WriteLine("Çıkış yapılıyor...");
+                Console.ReadKey();
+                
+            }
+          }
+        }
+    }
+}
